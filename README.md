@@ -30,7 +30,7 @@ The tool only updates the version numbers in the package.json file; it does not 
 
 It is recommended to review the changes made by the tool and test your application thoroughly after updating packages.
 
-[github link](URL)
+[github link](https://github.com/LhonRafaat/npm-auto-pacakges-updater)
 
 # Author
 
