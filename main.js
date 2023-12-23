@@ -4,7 +4,8 @@ import fs from "fs";
 import { exec } from "child_process";
 import process from "node:process";
 
-const pkgJsonPath = process.argv[2] ?? "./package.json";
+const pkgJsonPath = process.argv[2];
+const excludeDev = process.argv[3] === "excludeDev";
 
 async function updatePackages(pkgs) {
   console.log("running npm i " + pkgs);
@@ -39,6 +40,8 @@ for (const pkg in parsedFile["dependencies"]) {
   packages.push(pkg + "@latest");
 }
 
-for (const pkg in parsedFile["devDependencies"]) packages.push(pkg + "@latest");
+if (!excludeDev)
+  for (const pkg in parsedFile["devDependencies"])
+    packages.push(pkg + "@latest");
 
 updatePackages(packages.toString().replaceAll(",", " "));
