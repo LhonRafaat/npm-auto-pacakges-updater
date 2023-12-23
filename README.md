@@ -6,23 +6,23 @@ Auto Package Updater is a command-line tool that automates the process of updati
 
 To run the Auto Package Updater, use the following command:
 
-`npx npm-auto-packages-updater [path-to-package.json]`
+`npx npm-auto-packages-updater path-to-package.json [excludeDev]`
 
-If the path-to-package.json argument is not provided, the tool assumes that the package.json file is in the same directory where the command is executed.
+You can optionally pass the excludeDev arguement to skip updating the dev dependencies.
 
 # Installation
 
 Auto Package Updater can be used directly using npx, without the need for a separate installation step.
 
-# Examples
-
-Update packages in the current directory:
-
-`npx npm-auto-packages-updater`
+# Example
 
 Update packages in a specific directory:
 
 `npx npm-auto-packages-updater ./path-to-package.json`
+
+Exclude dev dependencies:
+
+`npx npm-auto-packages-updater ./path-to-package.json excludeDev`
 
 # Notes
 
