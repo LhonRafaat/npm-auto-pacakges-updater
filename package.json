@@ -1,6 +1,6 @@
 {
   "name": "npm-auto-packages-updater",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "updates the packages inside package json to their latest version",
   "type": "module",
   "main": "main.js",
